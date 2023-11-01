@@ -9,24 +9,52 @@
          type="com.mrmukto12.moviemvvm.models.PopularModel.Result" />
 
  </data>
-    <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="180dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:padding="15dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="0dp">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp">
 
-        <ImageView
-            android:id="@+id/item_movie_poster"
+            <ImageView
+                android:id="@+id/item_movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sposter"
+
+                />
+<!--
+            <ImageView
+                android:id="@+id/item_movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sposter"
+                app:setMovieImage="@{String.valueOf(item.posterPath)}"
+                />
+-->
+
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/sposter"
-            app:setMovieImage="@{String.valueOf(item.posterPath)}"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@{String.valueOf(item.title)}"
+
+
             />
 
-    </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 </layout>

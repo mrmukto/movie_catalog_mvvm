@@ -9,11 +9,11 @@ import com.bumptech.glide.Glide
 @BindingAdapter("app:setMovieImage")
 fun setImage(imageView: ImageView, icon: String?) {
     icon?.let {
-        val url = "image_url"
+        val url = icon
         Glide
             .with(imageView.context)
             .load(url)
             .into(imageView)
     }
-
 }
+
